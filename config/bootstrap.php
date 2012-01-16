@@ -8,8 +8,9 @@ Setup::registerAutoloadPEAR();
 // configuration des annotations
 $isDevMode = true;
 $config = Setup::createAnnotationMetadataConfiguration(
-    array(__DIR__ . '/../entities', $isDevMode)
+    array(__DIR__ . '/../Entity'), $isDevMode
 );
+
 
 // configuration de la connexion
 $connection = array(
