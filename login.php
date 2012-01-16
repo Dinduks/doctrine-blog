@@ -1,9 +1,9 @@
 <?php
 
-require_once('./config/bootstrap.php');
+require_once(__DIR__ . '/config/bootstrap.php');
 
 $pageTitle = "Se connecter";
-require_once('./templates/header.php');
+require_once(__DIR__ . '/templates/header.php');
 
 if (isset($_SESSION['user'])) {
     header('Location: /index.php');
@@ -46,4 +46,4 @@ if ($_POST) {
 </form>
 
 <?php
-require_once('./templates/footer.php');
+require_once(__DIR__ . '/templates/footer.php');
