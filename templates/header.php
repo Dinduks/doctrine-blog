@@ -75,7 +75,8 @@
           <a class="brand" href="#">Doctrine Blog</a>
 
           <ul class="nav">
-            <li class="active"><a href="/">Page d'accueil</a></li>
+            <li><a href="/">Page d'accueil</a></li>
+            <li><a href="/newpost.php">Nouvel article</a></li>
           </ul>
         </div>
       </div>
