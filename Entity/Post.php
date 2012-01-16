@@ -2,7 +2,7 @@
 
 
 /**
- * @Entity
+ * @Entity(repositoryClass="PostRepository")
  * @Table(name="posts")
  */
 class Post
