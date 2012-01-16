@@ -24,6 +24,11 @@ class Post
      */
     protected $body;
     
+    /**
+     * @ManyToOne(targetEntity="User")
+     */
+    protected $poster;
+    
     public function getId()
     {
         return $this->id;
@@ -52,5 +57,15 @@ class Post
     public function setBody($body)
     {
         $this->body = $body;
+    }
+    
+    public function getPoster()
+    {
+        return $this->poster;
+    }
+
+    public function setPoster($poster)
+    {
+        $this->poster = $poster;
     }
 }

@@ -24,5 +24,6 @@ $connection = array(
 $em = \Doctrine\ORM\EntityManager::create($connection, $config);
 
 require_once __DIR__ . '/../Entity/User.php';
+require_once __DIR__ . '/../Entity/Post.php';
 
 session_start();
