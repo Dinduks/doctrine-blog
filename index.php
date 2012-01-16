@@ -17,6 +17,13 @@ $posts = $em->getRepository('Post')->findAllOrderedById();
     <h1><?php echo $post->getTitle() ?></h1>
     <p><?php echo nl2br($post->getBody()) ?></p>
     <hr />
+    
+    <p style="text-align: right;">
+        <a href="/deletepost.php?id=<?php echo $post->getId() ?>"
+           class="btn danger">
+            Supprimer cet article
+        </a>
+    </p>
     <?php endforeach; ?>
 </article>
 
