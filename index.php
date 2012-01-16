@@ -9,7 +9,7 @@ $pageTitle = "Page d'accueil";
 // afficher le header
 require_once(__DIR__ . '/templates/header.php');
 
-$posts = $em->getRepository('Post')->findAll();
+$posts = $em->getRepository('Post')->findAllOrderedById();
 ?>
 
 <article style="margin-bottom:4em;">
