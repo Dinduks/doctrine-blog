@@ -18,6 +18,11 @@ class Category
      */
     protected $name;
     
+    /**
+     * @ManyToMany(targetEntity="Post", mappedBy="categories")
+     */
+    protected $posts;
+    
     public function getId()
     {
         return $this->id;
@@ -36,5 +41,15 @@ class Category
     public function setName($name)
     {
         $this->name = $name;
+    }
+    
+    public function getPosts()
+    {
+        return $this->posts;
+    }
+
+    public function setPosts($posts)
+    {
+        $this->posts = $posts;
     }
 }

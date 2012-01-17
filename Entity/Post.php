@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * @Entity(repositoryClass="PostRepository")
  * @Table(name="posts")
@@ -28,6 +27,11 @@ class Post
      * @ManyToOne(targetEntity="User", fetch="EAGER")
      */
     protected $poster;
+    
+    /**
+     * @ManyToMany(targetEntity="Category", inversedBy="posts")
+     */
+    protected $categories;
     
     public function getId()
     {
@@ -67,5 +71,15 @@ class Post
     public function setPoster($poster)
     {
         $this->poster = $poster;
+    }
+    
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    public function setCategories($categories)
+    {
+        $this->categories = $categories;
     }
 }
