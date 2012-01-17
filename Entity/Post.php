@@ -29,7 +29,7 @@ class Post
     protected $poster;
     
     /**
-     * @ManyToMany(targetEntity="Category", inversedBy="posts")
+     * @ManyToMany(targetEntity="Category", inversedBy="posts", fetch="EAGER")
      */
     protected $categories;
     

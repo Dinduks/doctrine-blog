@@ -62,5 +62,19 @@ require_once(__DIR__ . '/templates/header.php');
     </p>
 </form>
 
+<h2>Supprimer une catégorie de cet article</h2>
+<?php if ($post->getCategories()->isEmpty()) : ?>
+Cet article n'a aucune catégorie.
+<?php else : ?>
+<table>
+    <?php foreach ($post->getCategories() as $category) : ?>
+    <tr>
+        <td><?php echo $category->getName() ?></td>
+        <td><a href="/deleteCategoryFromPost.php?post_id=<?php echo $post->getId() ?>&category_id=<?php echo $category->getId() ?>" class="btn danger">Supprimer</a></td>
+    </tr>
+    <?php endforeach ?>
+</table>
+<?php endif ?>
+
 <?php
 require_once(__DIR__ . '/templates/footer.php');
