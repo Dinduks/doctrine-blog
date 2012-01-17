@@ -77,6 +77,7 @@
           <ul class="nav">
             <li><a href="/">Page d'accueil</a></li>
             <li><a href="/newpost.php">Nouvel article</a></li>
+            <li><a href="/newcategory.php">Nouvelle catégorie</a></li>
           </ul>
         </div>
       </div>
