@@ -25,7 +25,7 @@ class Post
     protected $body;
     
     /**
-     * @ManyToOne(targetEntity="User")
+     * @ManyToOne(targetEntity="User", fetch="EAGER")
      */
     protected $poster;
     
