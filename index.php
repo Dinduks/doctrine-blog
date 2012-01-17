@@ -23,6 +23,10 @@ $posts = $em->getRepository('Post')->findAllOrderedById();
            class="btn danger">
             Supprimer cet article
         </a>
+        <a href="/editpost.php?id=<?php echo $post->getId() ?>"
+           class="btn success">
+            Éditer l'article
+        </a>
     </p>
     <?php endforeach; ?>
 </article>
